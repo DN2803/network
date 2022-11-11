@@ -4,7 +4,6 @@ import threading
 import multiprocessing
 import sys
 urls = sys.argv[1:]
-number_of_server = len(sys.agrv) - 1
 port = 80
 #Dau hieu phan tach phan header va body
 header_delimiter = b"\r\n\r\n"
