@@ -3,6 +3,8 @@ import os
 import threading
 import multiprocessing
 import sys
+urls = sys.argv[1:]
+number_of_server = len(sys.agrv) - 1
 port = 80
 #Dau hieu phan tach phan header va body
 header_delimiter = b"\r\n\r\n"
@@ -239,7 +241,7 @@ def downloadListURLs(list_urls):
 
 #Ham main
 def main():
-    list_url=['http://web.stanford.edu/class/cs231a/project.htm']
+    list_url= urls
     downloadListURLs(list_url)
 if __name__ == '__main__':
     main()
